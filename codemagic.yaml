@@ -1,0 +1,17 @@
+workflows:
+  build_movix:
+    name: "Build Movix App"
+    max_build_duration: 60
+    environment:
+      vars:
+        EXPO_TOKEN: "${EXPO_TOKEN}"
+    scripts:
+      - npm install
+      - npx expo prebuild
+      - npx expo export
+    artifacts:
+      - build/**
+    publishing:
+      email:
+        recipients:
+          - abdessamadchabadi@gmail.com
