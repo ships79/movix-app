@@ -1,0 +1,22 @@
+{
+  "expo": {
+    "name": "movix app",
+    "slug": "movix_app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "supportsTablet": true,
+
+    "android": {
+      "package": "com.chabimalawi.movixapp"
+    },
+
+    "ios": {
+      "bundleIdentifier": "com.chabimalawi.movixapp",
+      "supportsTablet": true
+    },
+
+    "web": {
+      "bundler": "metro"
+    }
+  }
+}

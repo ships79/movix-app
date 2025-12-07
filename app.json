@@ -1,0 +1,12 @@
+{
+  "expo": {
+    "extra": {
+      "eas": {
+        "projectId": "54af5681-712d-40b4-bf9c-697cb9507fc7"
+      }
+    },
+    "ios": {
+      "bundleIdentifier": "com.abdessamad.movixapp"
+    }
+  }
+}
