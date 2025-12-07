@@ -1,24 +1,17 @@
 workflows:
-  build_movix:
-    name: Build Movix App
-    max_build_duration: 60
-
+  expo-android:
+    name: Expo Android APK Build
     environment:
       vars:
         EXPO_TOKEN: $EXPO_TOKEN
-
     scripts:
-      - npm install
-      - npx expo prebuild
-      - npx expo export
-      # منع تشغيل emulator نهائياً
-      - npx expo run:android --variant release --no-install
-
+      - name: Install dependencies
+        script: |
+          npm install
+          npm install -g expo-cli
+      - name: Build APK using old Expo CLI
+        script: |
+          expo build:android -t apk --non-interactive
     artifacts:
-      - android/app/build/outputs/**/*.apk
-      - android/app/build/outputs/**/*.aab
-
-    publishing:
-      email:
-        recipients:
-          - abdessamadhcabadi@gmail.com
+      - dist/**/*.apk
+      - build/**/*.apk
